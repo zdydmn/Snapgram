@@ -1,8 +1,9 @@
 
 
 <template>
-  <div>
+  <div class="flex">
     <Navbar />
+    <div class="bg-dark1 flex-1"></div>
   </div>
 </template>
 

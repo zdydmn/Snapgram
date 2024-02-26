@@ -2,7 +2,7 @@
   <div class="w-270 h-lvh px-6 py-8 bg-dark3 text-white flex flex-col justify-between">
     <div class="gap-y-11">
       <div><img src="../assets/Logo.svg" alt="SVG Image" /></div>
-      <div class="my-11 flex items-center gap-x-6">
+      <div class="my-11 flex items-center gap-x-6 hover:cursor-pointer" @click="activeFn(99)" :class="[isActive === 99 ? 'active' : '']">
         <img src="../assets/header.png" class="w-14 h-14 rounded-full" />
         <div>
           <div class="text-light2 font-bold text-lg">Lewis Hamilton</div>
@@ -12,7 +12,7 @@
       <div>
         <div v-for="(item, index) in router" :key="item.name"
           class="nav-item flex gap-x-6 items-center hover:cursor-pointer hover:bg-gray-700 font-medium cursor:pointer rounded-lg mb-2.5"
-          :class="[isActive === index ? 'nav-active' : '']" @click="activeFn(index)">
+          :class="[isActive === index ? 'active nav-active' : '']" @click="activeFn(index)">
           <img class="w-6 h-6 stroke-white" :src="item.icon" alt="SVG Image" />
           <div class="text-light2 text-lg">{{ item.name }}</div>
         </div>
@@ -79,14 +79,17 @@ const router = [
   padding: 10px;
 }
 
+.active {
+  position: relative;
+}
+
 .nav-active {
   background: #877eff !important;
   font-weight: 700;
-  position: relative;
   transition: all 0.3s;
 }
 
-.nav-active::before {
+.active::before {
   content: "";
   background: #877eff;
   position: absolute;
