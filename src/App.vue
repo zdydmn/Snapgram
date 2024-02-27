@@ -3,7 +3,9 @@
 <template>
   <div class="flex">
     <Navbar />
-    <div class="bg-dark1 flex-1"></div>
+    <div class="flex-1">
+      <router-view />
+    </div>
   </div>
 </template>
 
