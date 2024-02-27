@@ -1,5 +1,5 @@
 <template>
-  <div class="w-270 h-lvh px-6 py-8 bg-dark3 text-white flex flex-col justify-between">
+  <div class="w-270 h-full px-6 py-8 bg-dark3 text-white flex flex-col justify-between">
     <div class="gap-y-11">
       <div><img src="../assets/Logo.svg" alt="SVG Image" /></div>
       <div class="my-11 flex items-center gap-x-6 hover:cursor-pointer" @click="activeFn(-1, '/user')"
@@ -36,11 +36,11 @@
 
 <script lang="ts" setup>
 import { ref, watch } from "vue";
-import { useRoute } from 'vue-router';
-import router from '../routes/index';
+import { useRoute, useRouter } from 'vue-router';
 
 
 const route = useRoute()
+const router = useRouter()
 const isActive = ref();
 const my_router = [
   {
@@ -93,7 +93,7 @@ watch(() => route.path, ( _old ,newVal) => {
 
 const activeFn = (index: number, path: string) => {
   isActive.value = index;
-  router.push({ path })
+  router.push(path)
 };
 
 </script>

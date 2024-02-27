@@ -8,6 +8,9 @@ export default {
     extend: {
       spacing: {
         '270': '270px',
+        '85px': '85px',
+        '465px': '465px',
+        '1024': '1024px',
       },
       colors: {
         dark1: '#000000',
@@ -15,8 +18,10 @@ export default {
         dark3: '#101012',
         dark4: '#1F1F22',
         primary500: '#877EFF',
+        primary500_h: '#a19afc',
         light2: '#EFEFEF',
-        light3: '#7878A3'
+        light3: '#7878A3',
+        light4: '#5C5C7B'
       },
       fill: {
         primary500: '#877EFF',

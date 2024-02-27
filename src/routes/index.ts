@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-    { path: '/', component: () => import('../views/Home.vue') },
-    { path: '/explore', component: () => import('../views/Explore.vue') },
-    { path: '/people', component: () => import('../views/People.vue') },
-    { path: '/saved', component: () => import('../views/Saved.vue') },
-    { path: '/reels', component: () => import('../views/Reels.vue') },
-    { path: '/chats', component: () => import('../views/Chats.vue') },
-    { path: '/createPost', component: () => import('../views/CreatePost.vue') },
-    { path: '/user', component: () => import('../views/User.vue') },
+    { path: '/', component: () => import('@/views/Home.vue') },
+    { path: '/explore', component: () => import('@/views/Explore.vue') },
+    { path: '/people', component: () => import('@/views/People.vue') },
+    { path: '/saved', component: () => import('@/views/Saved.vue') },
+    { path: '/reels', component: () => import('@/views/Reels.vue') },
+    { path: '/chats', component: () => import('@/views/Chats.vue') },
+    { path: '/createPost', component: () => import('@/views/CreatePost.vue') },
+    { path: '/user', component: () => import('@/views/User.vue') },
 ]
 
 const router = createRouter({
