@@ -10,6 +10,9 @@ export default {
         '270': '270px',
         '85px': '85px',
         '465px': '465px',
+        'asd': "800px",
+        'imgCardW': "700px",
+        'imgCardH': "600px",
         '1024': '1024px',
       },
       colors: {
@@ -17,6 +20,7 @@ export default {
         dark2: '#09090A',
         dark3: '#101012',
         dark4: '#1F1F22',
+        imgButton: '#1D1D22',
         primary500: '#877EFF',
         primary500_h: '#a19afc',
         light2: '#EFEFEF',
