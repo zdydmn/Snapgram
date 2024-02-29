@@ -8,6 +8,7 @@ export default {
     extend: {
       spacing: {
         '270': '270px',
+        '5_5': '5.5rem',
         '30': '7.5rem',
         '465px': '465px',
         'asd': "800px",

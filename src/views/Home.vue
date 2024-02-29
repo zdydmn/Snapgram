@@ -1,13 +1,16 @@
 <template>
     <div class="flex items-start h-full">
         <div class="bg-dark1 flex-1 text-white h-full p-28 overflow-y-auto flex flex-col items-center gap-y-24 ">
-            <div class="h-48 w-asd">
+            <div class="h-48 w-asd flex items-center gap-x-6">
                 <RollComponent>
                     <div v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]" :key="item"
-                        class="header-border w-30 h-30 flex items-center justify-center rounded-full shrink-0">
-                        <img class="w-28 h-28 rounded-full border-black border-4" src="../assets/testImg.png" alt="">
+                        class="header-border w-24 h-24 flex items-center justify-center rounded-full shrink-0">
+                        <img class="w-5_5 h-5_5 rounded-full border-black border-4" src="../assets/testImg.png" alt="">
                     </div>
                 </RollComponent>
+                <button class=" w-7 h-7 rounded-full bg-imgButton flex items-center justify-center hover-img-button">
+                    <img src="@/assets/right.svg" class="right">
+                </button>
             </div>
             <div class="w-full gap-y-16 flex flex-col items-center">
                 <div class=" w-full flex justify-between items-center">
@@ -105,4 +108,5 @@ const trendsList = [
 <style scoped>
 .header-border {
     background: linear-gradient(180deg, #877EFF 0%, #685DFF 46.15%, #3121FF 100%);
-}</style>
+}
+</style>
