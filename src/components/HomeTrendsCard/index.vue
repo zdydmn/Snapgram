@@ -2,24 +2,24 @@
     <div class="bg-dark2 rounded-3xl border border-dark4 px-12 py-14 gap-y-5 flex flex-col w-asd">
         <div class="flex justify-between items-start">
             <div class="flex items-center gap-x-4">
-                <img src="@/assets/header.png" alt="" class="rounded-full w-12 h-12">
+                <img :src="cardInfo?.user_info.header_img" alt="" class="rounded-full w-12 h-12">
                 <div>
-                    <div class="text-light2 font-bold text-lg">Lewis Hamilton</div>
-                    <div class="text-light3 font-normal text-sm">26 June at 09:32 PM</div>
+                    <div class="text-light2 font-bold text-lg">{{ cardInfo?.user_info.name }}</div>
+                    <div class="text-light3 font-normal text-sm">{{cardInfo?.create_time}}</div>
                 </div>
             </div>
-            <div>
+            <div v-if="user_info.name === cardInfo?.user_info.name ">
                 <button>
                     <img src="@/assets/edit.svg" alt="">
                 </button>
             </div>
         </div>
         <div>
-            It's a big world out there - explore!
+            {{cardInfo?.desp}}
             <!-- #nature #mountains -->
         </div>
-        <div>
-            <ImageDisplay />
+        <div v-if="cardInfo?.type === 'imageText'">
+            <ImageDisplay :img_list="cardInfo?.img_list"/>
         </div>
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-7">
@@ -34,13 +34,13 @@
                     <button>
                         <img src="@/assets/commit.svg" alt="">
                     </button>
-                    <span>68</span>
+                    <span>{{cardInfo?.comment_num}}</span>
                 </div>
                 <div class="flex items-center gap-1">
                     <button>
                         <img src="@/assets/forward.svg" alt="">
                     </button>
-                    <span>74</span>
+                    <span>{{cardInfo?.forward_num}}</span>
                 </div>
             </div>
             <div>
@@ -64,12 +64,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
 import ImageDisplay from './ImageDisplay.vue';
+import { useUserInfoStore } from '../../store/index';
+const {cardInfo} = defineProps({
+    cardInfo: Object
+})
+const user_info = useUserInfoStore()
+const isCollect = ref(cardInfo?.isCollect)
+const isLike = ref(cardInfo?.isLike)
+const likeNum = ref(cardInfo?.like_num)
 
-const isCollect = ref(false)
-const isLike = ref(false)
-const likeNum = ref(10)
 
 const collectFn = () => {
     isCollect.value = !isCollect.value;

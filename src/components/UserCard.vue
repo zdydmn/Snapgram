@@ -1,5 +1,5 @@
 <template>
-    <div class="w-48 h-48 border-dark4 border bg-dark2 flex flex-col justify-center items-center rounded-2xl px-8 gap-y-3">
+    <div class="w-48 h-48 border-dark4 border bg-dark2 flex flex-col justify-center items-center rounded-2xl px-8 gap-y-3 shrink-0">
         <div>
             <img class="w-14 h-14 rounded-full" src="../assets/testImg.png" />
         </div>

@@ -8,7 +8,7 @@ export default {
     extend: {
       spacing: {
         '270': '270px',
-        '85px': '85px',
+        '30': '7.5rem',
         '465px': '465px',
         'asd': "800px",
         'imgCardW': "700px",
@@ -25,7 +25,8 @@ export default {
         primary500_h: '#a19afc',
         light2: '#EFEFEF',
         light3: '#7878A3',
-        light4: '#5C5C7B'
+        light4: '#5C5C7B',
+        yello1: '#FFB620'
       },
       fill: {
         primary500: '#877EFF',
